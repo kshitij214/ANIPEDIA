@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .habitat {
   margin-right: 110px;
   position: relative;
@@ -87,3 +88,94 @@
   box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
   transform: translateY(-0.5em);
 }
+=======
+.habitat {
+  margin-right: 110px;
+  position: relative;
+  align-items: centre;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.PhysicalDescription {
+  margin-right: 110px;
+  position: relative;
+  align-items: centre;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.LifespanLongevity {
+  margin-right: 110px;
+  position: relative;
+  align-items: centre;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.FoodHabits {
+  margin-right: 110px;
+  position: relative;
+  align-items: centre;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.Predation {
+  margin-right: 110px;
+  align-items: centre;
+  position: relative;
+  align-items: centre;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.habitat:hover,
+.habitat:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.5em);
+}
+
+.PhysicalDescription:hover,
+.PhysicalDescription:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.5em);
+}
+
+.LifespanLongevity:hover,
+.LifespanLongevity:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.5em);
+}
+.FoodHabits:hover,
+.FoodHabits:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.5em);
+}
+
+.Predation:hover,
+.Predation:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.5em);
+}
+>>>>>>> 454b5e5df019038b4e338486111934dbfa9f3603
