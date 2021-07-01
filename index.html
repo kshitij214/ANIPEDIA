@@ -38,10 +38,85 @@
       <input
         type="text"
         name="searchbox"
-        id="searchbox"
+        id="myinput"
         placeholder="Type your search here..."
+        onkeyup="searchanimals()"
       />
-      <button>Search</button>
+      <button onclick="searchviabutton()">Search</button>
+      <ul id="myUL">
+        <li style="display: none">
+          <a href="https://en.wikipedia.org/wiki/Tiger">tiger</a>
+        </li>
+
+        <li style="display: none">
+          <a href="https://en.wikipedia.org/wiki/Titan_(moon)">titan</a>
+        </li>
+
+        <li style="display: none">
+          <a href="https://en.wikipedia.org/wiki/Lion">lion</a>
+        </li>
+
+        <li style="display: none">
+          <a href="https://en.wikipedia.org/wiki/Peafowl">peacock</a>
+        </li>
+
+        <li style="display: none">
+          <a href="https://en.wikipedia.org/wiki/Columbidae">pigeon</a>
+        </li>
+
+        <li style="display: none">
+          <a href="https://en.wikipedia.org/wiki/Cheetah">cheetah</a>
+        </li>
+      </ul>
+      <script>
+        const searchanimals = () => {
+          let filter = document.getElementById("myinput").value.toUpperCase();
+          let ul = document.getElementById("myUL");
+          let li = ul.getElementsByTagName("li");
+          for (var i = 0; i < li.length; i++) {
+            let a = li[i].getElementsByTagName("a")[0];
+            let textvalue = a.textContent || a.innerText;
+            if (filter === "") {
+              li[i].style.display = "none";
+            } else if (textvalue.toUpperCase().indexOf(filter) > -1) {
+              li[i].style.display = "";
+            } else {
+              li[i].style.display = "none";
+            }
+          }
+        };
+      </script>
+      <script>
+        function searchviabutton() {
+          let filter = document.getElementById("myinput").value.toUpperCase();
+          let ul = document.getElementById("myUL");
+          let li = ul.getElementsByTagName("li");
+          let textvalue;
+          let a;
+          var flag = 0;
+          for (var i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            textvalue = a.textContent || a.innerText;
+            if (textvalue.toUpperCase() == filter) {
+              flag = 1;
+              window.open(a);
+            }
+          }
+          if (flag == 0) {
+            alert(
+              "The content your are trying to search is currently not availible in our library."
+            );
+          }
+        }
+      </script>
+    </div>
+    <div class="about">
+      <button onclick="openaboutus()">About Us</button>
+      <script>
+        function openaboutus() {
+          window.open("/aboutuspage.html");
+        }
+      </script>
     </div>
     <script>
       const sec = document.querySelector(".sec");
