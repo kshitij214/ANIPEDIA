@@ -1,0 +1,409 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #404040;
+}
+body {
+  display: flex;
+  place-items: center; /* this changes postion of clock */
+  background: url("images/stagbg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* background: #dde1e7; */
+  text-align: center;
+}
+.clock {
+  position: absolute;
+  margin: 5px 90px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #dde1e7;
+  height: 250px;
+  width: 250px;
+  top: 30%;
+  left: 50%; /* moves clock left and right */
+  transform: translate(-85%, -50%);
+  border-radius: 50%;
+  box-shadow: -3px -3px 7px #bbff0073, 3px 3px 5px rgba(217, 255, 0, 0.288);
+}
+.clock:before {
+  position: absolute;
+  content: "";
+  height: 220px;
+  width: 220px;
+  background: #dde1e7;
+  border-radius: 50%;
+  box-shadow: inset -3px -3px 7px #ffffff73,
+    inset 3px 3px 5px rgba(94, 104, 121, 0.288);
+}
+.clock:after {
+  position: absolute;
+  content: "";
+
+  height: 120px;
+  width: 120px;
+  background: #dde1e7;
+  border-radius: 50%;
+  box-shadow: -1px -1px 5px #ffffff73, 1px 1px 3px rgba(94, 104, 121, 0.288);
+}
+.clock .center-nut {
+  height: 15px;
+  width: 15px;
+  background: #404040;
+  border-radius: 50%;
+  z-index: 2;
+  position: absolute;
+}
+.clock .center-nut2 {
+  height: 9px;
+  width: 9px;
+  background: #3498db;
+  border-radius: 50%;
+  z-index: 15;
+  position: absolute;
+}
+.indicators div {
+  position: absolute;
+  width: 2px;
+  height: 5px;
+  background: #404040;
+}
+.indicators div:nth-child(1) {
+  transform: rotate(30deg) translateY(-100px);
+}
+.indicators div:nth-child(2) {
+  transform: rotate(60deg) translateY(-100px);
+}
+.indicators div:nth-child(3) {
+  background: #3498db;
+  transform: rotate(90deg) translateY(-100px);
+}
+.indicators div:nth-child(4) {
+  transform: rotate(120deg) translateY(-100px);
+}
+.indicators div:nth-child(5) {
+  transform: rotate(150deg) translateY(-100px);
+}
+.indicators div:nth-child(6) {
+  background: #3498db;
+  transform: rotate(180deg) translateY(-100px);
+}
+.indicators div:nth-child(7) {
+  transform: rotate(210deg) translateY(-100px);
+}
+.indicators div:nth-child(8) {
+  transform: rotate(240deg) translateY(-100px);
+}
+.indicators div:nth-child(9) {
+  background: #3498db;
+  transform: rotate(270deg) translateY(-100px);
+}
+.indicators div:nth-child(10) {
+  transform: rotate(300deg) translateY(-100px);
+}
+.indicators div:nth-child(11) {
+  transform: rotate(330deg) translateY(-100px);
+}
+.indicators div:nth-child(12) {
+  background: #3498db;
+  transform: rotate(360deg) translateY(-100px);
+}
+.sec-hand,
+.min-hand,
+.hr-hand {
+  position: absolute;
+}
+.sec-hand,
+.sec {
+  height: 180px;
+  width: 180px;
+  z-index: 6;
+}
+.min-hand,
+.min {
+  height: 140px;
+  width: 140px;
+  z-index: 5;
+}
+.hr-hand,
+.hr {
+  height: 110px;
+  width: 110px;
+  z-index: 4;
+}
+.sec,
+.min,
+.hr {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+.sec:before {
+  position: absolute;
+  content: "";
+  height: 110px;
+  width: 3px;
+  background: #3498db;
+}
+.sec:after {
+  position: absolute;
+  content: "";
+  height: 35px;
+  width: 7px;
+  background: #3498db;
+  top: 105px;
+  border-radius: 5px;
+}
+.min:before {
+  position: absolute;
+  content: "";
+  width: 1px;
+  top: -15px;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-bottom: 60px solid #e95949;
+}
+.min:after {
+  position: absolute;
+  content: "";
+  width: 3px;
+  top: 40px;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  border-top: 30px solid #e95949;
+}
+.hr:before {
+  position: absolute;
+  content: "";
+  width: 1px;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-bottom: 35px solid #303030;
+}
+.hr:after {
+  position: absolute;
+  content: "";
+  width: 3px;
+  top: 34px;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  border-top: 25px solid #303030;
+}
+
+.searchbox {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.searchbox input {
+  width: 400px;
+  height: 40px;
+  border: none;
+  border-radius: 15px 0px 0px 15px;
+  background-color: rgb(255, 255, 255);
+  backdrop-filter: blur(300px);
+  outline: none;
+  padding: 20px;
+}
+
+.searchbox button {
+  border: 1px;
+  width: 70px;
+  height: 40px;
+  outline: none;
+  background-color: rgba(255, 166, 0, 0.945);
+  border-radius: 0px 15px 15px 0px;
+  padding: 5px 10px;
+}
+
+button:hover {
+  background-color: rgb(250, 92, 0);
+}
+
+.about button {
+  position: absolute;
+  top: 1%;
+  left: 94.3%;
+  border: 1px;
+  height: 35px;
+  outline: none;
+  background-color: rgba(255, 166, 0, 0.945);
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+button:hover {
+  background-color: rgb(250, 92, 0);
+}
+
+#myUL {
+  /* Remove default list styling */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  mask-position: relative;
+  border: 1px solid #ddd; /* Add a border to all links */
+  border-radius: 10px;
+  margin-top: 2px; /* Prevent double borders */
+  background-color: #f6f6f6; /* Grey background color */
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove default text underline */
+  font-size: 15px; /* Increase the font-size */
+  color: black; /* Add a black text color */
+  display: block; /*Make it into a block element to fill the whole list */
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: rgb(
+    211,
+    209,
+    209
+  ); /* Add a hover effect to all links, except for headers */
+}
+
+.card {
+  margin: 500px;
+  position: relative;
+  width: 600px;
+  height: 350px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+.card .circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.card .circle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #d83131;
+  clip-path: circle(120px at center);
+  transition: 0.5s;
+}
+.card:hover .circle:before {
+  background: #0065c3;
+  clip-path: circle(400px at center);
+}
+
+.card .content {
+  position: relative;
+  width: 100%;
+  left: 20%;
+  padding: 20px 20px 20px 0px;
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+.card:hover .content {
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+}
+.card .content h3 {
+  color: #fff;
+  font-size: 2em;
+}
+.card .content p {
+  align-content: center;
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  .card {
+    width: auto;
+    max-width: 350px;
+    align-items: flex-start;
+    margin: 10px;
+  }
+  .card:hover {
+    height: 600px;
+  }
+  .card .content {
+    width: 100%;
+    left: 0;
+    padding: 40px;
+  }
+  .card:hover img {
+    top: 70%;
+    left: 50%;
+    height: 300px;
+  }
+}
+@media (max-width: 420px) {
+  .card .content {
+    padding: 20px;
+  }
+}
+
+.banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}
+.banner .blocks {
+  position: relative;
+  display: block;
+  width: 5vw;
+  height: 5vw;
+  animation: animate 0.5s ease-in-out forwards;
+}
+.banner .blocks:nth-child(even) {
+  animation: animate 1s ease-in-out forwards;
+}
+.banner .blocks:nth-child(7n + 3) {
+  animation: animate 1.5s ease-in-out forwards;
+}
+.banner .blocks:nth-child(7n + 7) {
+  animation: animate 0.5s ease-in-out forwads;
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: scale(0) translateY(1000px);
+  }
+  50% {
+    opacity: 1;
+    background: url(/images/simplebg.jpg);
+    background-position: center;
+    background-attachment: fixed;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0px);
+    background: url(/images/simplebg.jpg);
+    background-position: center;
+    background-attachment: fixed;
+  }
+}
