@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>ANIPEDIA</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
@@ -35,13 +35,81 @@
       </div>
     </div>
     <div class="searchbox">
-      <input
-        type="text"
-        name="searchbox"
-        id="searchbox"
-        placeholder="Type your search here..."
-      />
-      <button>Search</button>
+      <div class="searchboxwrapper">
+        <input
+          type="text"
+          name="searchbox"
+          id="myinput"
+          placeholder="Type your search here..."
+        />
+        <button onclick="searchviabutton()">Search</button>
+        <ul id="myUL">
+          <li style="display: none">
+            <a href="/tac.html">short-beaked echidna</a>
+          </li>
+
+          <li style="display: none">
+            <a href="/Ornithorhynchus anatinus(Duck-billed platypus).html"
+              >platypus</a
+            >
+          </li>
+
+          <li style="display: none">
+            <a href="/zag.html">long-beaked echidna</a>
+          </li>
+
+          <li style="display: none">
+            <a href="/mini.html">Water opossum</a>
+          </li>
+
+          <li style="display: none">
+            <a href="venu.html">Bushy-tailed opossum</a>
+          </li>
+
+          <li style="display: none">
+            <a href="irru.html">Black-shouldered opossum</a>
+          </li>
+
+          <li style="display: none">
+            <a href="phil.html">woolly opossum</a>
+          </li>
+
+          <li style="display: none">
+            <a href=""></a>
+          </li>
+        </ul>
+        <script>
+          function searchviabutton() {
+            let filter = document.getElementById("myinput").value.toUpperCase();
+            let ul = document.getElementById("myUL");
+            let li = ul.getElementsByTagName("li");
+            let textvalue;
+            let a;
+            var flag = 0;
+            for (var i = 0; i < li.length; i++) {
+              a = li[i].getElementsByTagName("a")[0];
+              textvalue = a.textContent || a.innerText;
+              if (textvalue.toUpperCase() == filter) {
+                flag = 1;
+                window.open(a);
+              }
+            }
+            if (flag == 0) {
+              alert(
+                "The content your are trying to search is currently not availible in our library."
+              );
+            }
+          }
+        </script>
+      </div>
+    </div>
+    <div class="about">
+      <button onclick="openaboutus()">About Us</button>
+      <script>
+        function openaboutus() {
+          window.open("/aboutuspage.html");
+        }
+      </script>
     </div>
     <script>
       const sec = document.querySelector(".sec");
