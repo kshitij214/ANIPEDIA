@@ -7,8 +7,8 @@ My name is Kshitij Yadav and this was my first year, second sem project given to
 
 Hrushikesh P : Main page and search functionality using javascript. Co-team leader.
 Kshitij Y    : Ideation and design of display template for the animal page. Co-team leader.
-Rishav K     : Bringer of the animations.
-Shivam S     : Collector of data of animals.
+Rishav K     : Fetched the animations.
+Shivam S     : Gathering of data on animals.
 Akash R S    : Created about us page. 
  
 Below is the link to the page:
