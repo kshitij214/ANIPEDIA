@@ -1,5 +1,5 @@
 # ANIPEDIA
-animal encyclopedia
+Animal Encyclopedia
 
 Hello to whoever is reading this.
 
